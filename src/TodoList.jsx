@@ -29,16 +29,17 @@ const TodoList = () => {
 
   return (
     <div>
-      <input
+          <input
+        className='w-1/2'
         type="text"
         value={inputValue}
         onChange={handleInputChange}
         placeholder="Enter a task"
       />
-      <button onClick={handleAddTodo}>Add</button>
-      <ol>
+      <button className='bg-slate-600 text-white rounded-md' onClick={handleAddTodo}>Add</button>
+      <ol className='py-2'>
         {todos.map((todo) => (
-          <li key={todo.id}>
+          <li className='py-1' key={todo.id}>
             <TodoItem todo={todo} onDelete={handleDeleteTodo} />
           </li>
         ))}
